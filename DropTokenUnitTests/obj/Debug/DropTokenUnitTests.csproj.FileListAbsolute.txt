@@ -1,0 +1,7 @@
+C:\Users\Spencer\documents\visual studio 2015\Projects\DropToken\DropTokenUnitTests\obj\Debug\DropTokenUnitTests.csprojResolveAssemblyReference.cache
+C:\Users\Spencer\documents\visual studio 2015\Projects\DropToken\DropTokenUnitTests\bin\Debug\DropTokenUnitTests.dll
+C:\Users\Spencer\documents\visual studio 2015\Projects\DropToken\DropTokenUnitTests\bin\Debug\DropTokenUnitTests.pdb
+C:\Users\Spencer\documents\visual studio 2015\Projects\DropToken\DropTokenUnitTests\bin\Debug\DropToken.exe
+C:\Users\Spencer\documents\visual studio 2015\Projects\DropToken\DropTokenUnitTests\bin\Debug\DropToken.pdb
+C:\Users\Spencer\documents\visual studio 2015\Projects\DropToken\DropTokenUnitTests\obj\Debug\DropTokenUnitTests.dll
+C:\Users\Spencer\documents\visual studio 2015\Projects\DropToken\DropTokenUnitTests\obj\Debug\DropTokenUnitTests.pdb

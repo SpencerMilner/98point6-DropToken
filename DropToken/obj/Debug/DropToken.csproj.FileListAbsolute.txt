@@ -1,0 +1,6 @@
+c:\users\spencer\documents\visual studio 2015\Projects\DropToken\DropToken\bin\Debug\DropToken.exe.config
+c:\users\spencer\documents\visual studio 2015\Projects\DropToken\DropToken\bin\Debug\DropToken.exe
+c:\users\spencer\documents\visual studio 2015\Projects\DropToken\DropToken\bin\Debug\DropToken.pdb
+c:\users\spencer\documents\visual studio 2015\Projects\DropToken\DropToken\obj\Debug\DropToken.csprojResolveAssemblyReference.cache
+c:\users\spencer\documents\visual studio 2015\Projects\DropToken\DropToken\obj\Debug\DropToken.exe
+c:\users\spencer\documents\visual studio 2015\Projects\DropToken\DropToken\obj\Debug\DropToken.pdb
