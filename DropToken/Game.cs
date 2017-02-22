@@ -25,6 +25,7 @@ namespace DropToken
             CHIP chip = CHIP.one;
             COMMAND command;
             int column = 0;
+            bool gameOver = false; // Prevent drop command from executing once game is over
 
             // Game Play
             while (true)
@@ -32,17 +33,18 @@ namespace DropToken
                 Console.Write("Player " + chip.ToString() + ", enter a command: ");
 
                 command = CommandInterpreter.parse(Console.ReadLine(), ref column);
-
-                if (!CommandExecutor.execute(board, command, chip, column)) {
+                if (!CommandExecutor.execute(board, command, chip, column,gameOver)) {
                     continue;
                 }
                 else if (board.getStatus() == STATUS.WIN)
                 {
+                    gameOver = true;
                     Console.WriteLine("WIN");
                     continue;
                 }
                 else if (board.getStatus() == STATUS.DRAW)
                 {
+                    gameOver = true;
                     Console.WriteLine("DRAW");
                     continue;
                 }

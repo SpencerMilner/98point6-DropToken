@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace DropToken
 {
-    enum CHIP { empty, one, two };
-    enum STATUS {OK,ERROR,WIN,DRAW,EXIT};
+    enum CHIP { empty, one, two }; // Represents unoccupied board locations and the chips for Players 1 and 2
+    enum STATUS {OK,ERROR,WIN,DRAW,EXIT}; // The status of the game/board in relation to the last command
 
     class GameBoard
     {
@@ -153,7 +153,7 @@ namespace DropToken
             Console.WriteLine("\n+--------\n\n  1 2 3 4\n");
         }
 
-        public void printList()
+        public void printList() // Print the list of plays
         {
             foreach (int a in columnList) Console.WriteLine(a);
         }

@@ -10,20 +10,20 @@ namespace DropToken
 
     static class CommandInterpreter
     {
-        private const int COMMAND_PARAM = 0;
-        private const int COL_PARAM = 1;
+        private const int COMMAND_PARAM = 0; // parameter that contains the command
+        private const int COL_PARAM = 1;    // parameter that contains the column
 
-        private const int PUT_PARAM_COUNT = 2;
-        private const int GBE_COMMAND_PARAM_COUNT = 1;
+        private const int PUT_PARAM_COUNT = 2; // Expected parameters for "PUT" command
+        private const int GBE_COMMAND_PARAM_COUNT = 1; // Expected parameters for other commands
 
-        private const int MIN_COLUMNS = 1;
+        private const int MIN_COLUMNS = 1; 
         private const int MAX_COLUMNS = 4;
 
         public static COMMAND parse(String input, ref int column)
         {
             string[] commands;
             if (input == null) return COMMAND.INVALID;
-            else commands = input.Split();
+            else commands = input.Split(); // split command parameters
             if (!parametersAreValid(ref commands)) return COMMAND.INVALID;
 
             if (commands[COMMAND_PARAM].Equals("GET")) return COMMAND.GET;

@@ -4,25 +4,26 @@ namespace DropToken
 {
     static class CommandExecutor
     {
-        public static bool execute(GameBoard gameBoard, COMMAND command, CHIP chip, int col)
+        public static bool execute(GameBoard gameBoard, COMMAND command, CHIP chip, int col, bool gameOver)
         {
-            switch (command)
-            {
-                case COMMAND.GET:
-                    get(gameBoard);
-                    return false;
-                case COMMAND.BOARD:
-                    board(gameBoard);
-                    return false;
-                case COMMAND.PUT:
-                    return put(gameBoard, chip,col);
-                case COMMAND.EXIT:
-                    exit(gameBoard);
-                    return true;
-                default:
-                    invalid();
-                    return false;
-            }
+                switch (command)
+                {
+                    case COMMAND.GET:
+                        get(gameBoard);
+                        return false;
+                    case COMMAND.BOARD:
+                        board(gameBoard);
+                        return false;
+                    case COMMAND.PUT:
+                    if (gameOver) goto default;
+                        return put(gameBoard, chip, col);
+                    case COMMAND.EXIT:
+                        exit(gameBoard);
+                        return true;
+                    default:
+                        invalid();
+                        return false;
+                }
         }
 
         private static void get(GameBoard board)
