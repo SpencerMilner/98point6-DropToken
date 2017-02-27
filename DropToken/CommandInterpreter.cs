@@ -22,11 +22,12 @@ namespace DropToken
         public static COMMAND parse(String input, ref int column)
         {
             string[] commands;
+
             if (input == null) return COMMAND.INVALID;
             else commands = input.Split(); // split command parameters
-            if (!parametersAreValid(ref commands)) return COMMAND.INVALID;
 
-            if (commands[COMMAND_PARAM].Equals("GET")) return COMMAND.GET;
+            if (!parametersAreValid(ref commands)) return COMMAND.INVALID;
+            else if (commands[COMMAND_PARAM].Equals("GET")) return COMMAND.GET;
             else if (commands[COMMAND_PARAM].Equals("BOARD")) return COMMAND.BOARD;
             else if (commands[COMMAND_PARAM].Equals("EXIT")) return COMMAND.EXIT;
             else
@@ -38,6 +39,7 @@ namespace DropToken
 
         private static bool parametersAreValid(ref string[] parameters)
         {
+
             if (!checkNumberOfParameters(parameters)) return false;
 
             parameters[COMMAND_PARAM] = parameters[COMMAND_PARAM].ToUpper();
@@ -57,7 +59,7 @@ namespace DropToken
         private static bool checkPutCommand(string[] parameters)
         {
             if (parameters.Length != PUT_PARAM_COUNT) return false;
-            if (parameters[COMMAND_PARAM].Equals("PUT"))
+            else if (parameters[COMMAND_PARAM].Equals("PUT"))
             {
                 int i = 0;
 
