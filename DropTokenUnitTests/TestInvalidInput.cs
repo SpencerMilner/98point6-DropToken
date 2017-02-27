@@ -10,36 +10,6 @@ namespace DropTokenUnitTests
     [TestClass]
     public class DropTokenUnitTests
     {
-        // Expected Output
-        const string WELCOME_MESSAGE = "You're Playing 98point6 Drop Token";
-        const string LINEBREAK = "----------------------------------";
-        const string PROMPT_PLAYER1 = "Player one, enter a command: ";
-        const string PROMPT_PLAYER2 = "Player two, enter a command: ";
-        const string ERROR = "ERROR";
-        const string EXIT = "EXIT";
-        const string OK = "OK";
-        const string WIN = "WIN";
-        const string DRAW = "DRAW";
-        // Test Input
-        const string INVALID_COMMAND = "-AbQ&# ";
-        const string INVALID_SECOND_PARAM = "GET GET";
-        const string INVALID_COMMAND_EXTRALETTER = "GETT";
-        const string INVALID_COMMAND_LARGEVALUE = "99999999999999999999";
-        const string INVALID_COMMAND_EMPTY = "";
-        const string PUT_COLUMN_EDGECASE_LOW = "PUT 0";
-        const string PUT_COLUMN_EDGECASE_HIGH = "PUT 5";
-        const string PUT_COLUMN_NEGATIVE = "PUT -1";
-        const string PUT_COLUMN_INVALID = "PUT GET";
-        const string PUT_COLUMN_EMPTY = "PUT ";
-        const string PUT_COLUMN_EXTRA_PARAMETER = "PUT 1 1";
-        const string PUT_COLUMN_DECIMAL = "PUT 1.8";
-        const string PUT_COLUMN_ONE = "PUT 1";
-        const string PUT_COLUMN_TWO = "PUT 2";
-        const string PUT_COLUMN_THREE = "PUT 3";
-        const string PUT_COLUMN_FOUR = "PUT 4";
-        const string GET = "GET";
-        const string INVALID_COMMAND_SPACES = " GET ";
-
         // Test Variables
         string testVal;
         string expected;
@@ -48,32 +18,32 @@ namespace DropTokenUnitTests
         [TestMethod]
         public void testInvalidCommand()
         {
-            testVal = INVALID_COMMAND;
+            testVal = CONST.INVALID_COMMAND;
             expected = buildErrorTestExpectedOutputString();
             result = runErrorTestWithValue(testVal);
             Assert.AreEqual<string>(expected, result);
 
-            testVal = INVALID_COMMAND_SPACES;
+            testVal = CONST.INVALID_COMMAND_SPACES;
             expected = buildErrorTestExpectedOutputString();
             result = runErrorTestWithValue(testVal);
             Assert.AreEqual<string>(expected, result);
 
-            testVal = INVALID_COMMAND_EXTRALETTER;
+            testVal = CONST.INVALID_COMMAND_EXTRALETTER;
             expected = buildErrorTestExpectedOutputString();
             result = runErrorTestWithValue(testVal);
             Assert.AreEqual<string>(expected, result);
 
-            testVal = INVALID_SECOND_PARAM;
+            testVal = CONST.INVALID_SECOND_PARAM;
             expected = buildErrorTestExpectedOutputString();
             result = runErrorTestWithValue(testVal);
             Assert.AreEqual<string>(expected, result);
 
-            testVal = INVALID_COMMAND_EMPTY;
+            testVal = CONST.INVALID_COMMAND_EMPTY;
             expected = buildErrorTestExpectedOutputString();
             result = runErrorTestWithValue(testVal);
             Assert.AreEqual<string>(expected, result);
 
-            testVal = INVALID_COMMAND_LARGEVALUE;
+            testVal = CONST.INVALID_COMMAND_LARGEVALUE;
             expected = buildErrorTestExpectedOutputString();
             result = runErrorTestWithValue(testVal);
             Assert.AreEqual<string>(expected, result);
@@ -82,37 +52,37 @@ namespace DropTokenUnitTests
         [TestMethod]
         public void testPutInvalidColumnValues()
         {
-            testVal = PUT_COLUMN_EDGECASE_LOW;
+            testVal = CONST.PUT_COLUMN_EDGECASE_LOW;
             expected = buildErrorTestExpectedOutputString();
             result = runErrorTestWithValue(testVal);
             Assert.AreEqual<string>(expected, result);
 
-            testVal = PUT_COLUMN_EDGECASE_HIGH;
+            testVal = CONST.PUT_COLUMN_EDGECASE_HIGH;
             expected = buildErrorTestExpectedOutputString();
             result = runErrorTestWithValue(testVal);
             Assert.AreEqual<string>(expected, result);
 
-            testVal = PUT_COLUMN_NEGATIVE;
+            testVal = CONST.PUT_COLUMN_NEGATIVE;
             expected = buildErrorTestExpectedOutputString();
             result = runErrorTestWithValue(testVal);
             Assert.AreEqual<string>(expected, result);
 
-            testVal = PUT_COLUMN_INVALID;
+            testVal = CONST.PUT_COLUMN_INVALID;
             expected = buildErrorTestExpectedOutputString();
             result = runErrorTestWithValue(testVal);
             Assert.AreEqual<string>(expected, result);
 
-            testVal = PUT_COLUMN_EMPTY;
+            testVal = CONST.PUT_COLUMN_EMPTY;
             expected = buildErrorTestExpectedOutputString();
             result = runErrorTestWithValue(testVal);
             Assert.AreEqual<string>(expected, result);
 
-            testVal = PUT_COLUMN_EXTRA_PARAMETER;
+            testVal = CONST.PUT_COLUMN_EXTRA_PARAMETER;
             expected = buildErrorTestExpectedOutputString();
             result = runErrorTestWithValue(testVal);
             Assert.AreEqual<string>(expected, result);
 
-            testVal = PUT_COLUMN_DECIMAL;
+            testVal = CONST.PUT_COLUMN_DECIMAL;
             expected = buildErrorTestExpectedOutputString();
             result = runErrorTestWithValue(testVal);
             Assert.AreEqual<string>(expected, result);
@@ -121,11 +91,11 @@ namespace DropTokenUnitTests
         private string buildErrorTestExpectedOutputString()
         {
             return string.Format(
-                        WELCOME_MESSAGE + "{0}" +
-                        LINEBREAK + "{0}" +
-                        PROMPT_PLAYER1 +
-                        ERROR + "{0}" +
-                        PROMPT_PLAYER1, Environment.NewLine);
+                        CONST.WELCOME_MESSAGE + "{0}" +
+                        CONST.LINEBREAK + "{0}" +
+                        CONST.PROMPT_PLAYER1 +
+                        CONST.ERROR + "{0}" +
+                        CONST.PROMPT_PLAYER1, Environment.NewLine);
         }
 
         private string runErrorTestWithValue(string testVal)

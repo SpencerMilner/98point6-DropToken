@@ -53,6 +53,7 @@
   </Choose>
   <ItemGroup>
     <Compile Include="TestBoardCommand.cs" />
+    <Compile Include="CONST.cs" />
     <Compile Include="TestDraw.cs" />
     <Compile Include="TestGetCommand.cs" />
     <Compile Include="TestWin.cs" />
